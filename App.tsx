@@ -1,8 +1,9 @@
+
 import React, { useState, useCallback } from 'react';
-import ResultDisplay from './components/ResultDisplay';
-import SettingsPanel from './components/SettingsPanel';
-import { StudentGroup } from './types';
-import { SettingsIcon } from './components/icons';
+import ResultDisplay from './components/ResultDisplay.tsx';
+import SettingsPanel from './components/SettingsPanel.tsx';
+import { StudentGroup } from './types.ts';
+import { SettingsIcon } from './components/icons.tsx';
 
 const App: React.FC = () => {
   const [isPanelOpen, setIsPanelOpen] = useState(false);

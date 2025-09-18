@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { StudentGroup } from '../types';
+import { StudentGroup } from '../types.ts';
 
 interface ResultDisplayProps {
   selectedStudents: string[];
