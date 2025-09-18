@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trình chọn Học sinh Ngẫu nhiên</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="manifest" href="/metadata.json">
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        const swCode = () => {
+          const CACHE_NAME = 'random-picker-cache-v1';
+          const urlsToCache = [
+            '/',
+            '/index.html',
+            '/index.tsx',
+            '/App.tsx',
+            '/types.ts',
+            '/components/icons.tsx',
+            '/components/ResultDisplay.tsx',
+            '/components/SettingsPanel.tsx',
+            'https://cdn.tailwindcss.com',
+            'https://esm.sh/react@^19.1.1',
+            'https://esm.sh/react-dom@^19.1.1/',
+            'https://esm.sh/react@^19.1.1/jsx-runtime',
+            'https://esm.sh/react-dom@^19.1.1/client'
+          ];
+
+          self.addEventListener('install', event => {
+            event.waitUntil(
+              caches.open(CACHE_NAME).then(cache => {
+                const cachePromises = urlsToCache.map(url => {
+                  return fetch(new Request(url, { mode: 'no-cors' }))
+                    .then(response => cache.put(url, response))
+                    .catch(err => console.warn(`Failed to cache ${url}:`, err));
+                });
+                return Promise.all(cachePromises);
+              })
+            );
+          });
+
+          self.addEventListener('fetch', event => {
+            event.respondWith(
+              caches.match(event.request).then(response => {
+                return response || fetch(event.request);
+              })
+            );
+          });
+        };
+        
+        const blob = new Blob(['(', swCode.toString(), ')()'], { type: 'application/javascript' });
+        const swUrl = URL.createObjectURL(blob);
+
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register(swUrl)
+            .then(registration => console.log('ServiceWorker registration successful.'))
+            .catch(error => console.log('ServiceWorker registration failed: ', error));
+        });
+      }
+    </script>
+</body>
+</html>

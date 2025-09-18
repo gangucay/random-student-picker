@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trình chọn Học sinh Ngẫu nhiên</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="manifest" href="/metadata.json">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.1",
+    "react/jsx-runtime": "https://esm.sh/react@^19.1.1/jsx-runtime",
+    "react-dom/client": "https://esm.sh/react-dom@^19.1.1/client",
+    "react-dom": "https://esm.sh/react-dom@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('ServiceWorker đăng ký thành công với scope: ', registration.scope);
+            })
+            .catch(error => {
+              console.log('ServiceWorker đăng ký thất bại: ', error);
+            });
+        });
+      }
+    </script>
+</body>
+</html>

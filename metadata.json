@@ -1,0 +1,24 @@
+{
+  "name": "Trình chọn Học sinh Ngẫu nhiên",
+  "short_name": "Chọn HS",
+  "description": "Một ứng dụng web để chọn ngẫu nhiên học sinh, chia nhóm và hiển thị kết quả một cách rõ ràng cho cả lớp quan sát.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/%3e%3ccircle cx='9' cy='7' r='4'/%3e%3cpath d='M22 21v-2a4 4 0 0 0-3-3.87'/%3e%3cpath d='M16 3.13a4 4 0 0 1 0 7.75'/%3e%3c/svg%3e",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/%3e%3ccircle cx='9' cy='7' r='4'/%3e%3cpath d='M22 21v-2a4 4 0 0 0-3-3.87'/%3e%3cpath d='M16 3.13a4 4 0 0 1 0 7.75'/%3e%3c/svg%3e",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "requestFramePermissions": []
+}
