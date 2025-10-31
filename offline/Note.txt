@@ -1,1 +1,0 @@
-Phải chạy file shim.html trong thư mục con
