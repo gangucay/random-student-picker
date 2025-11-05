@@ -1,0 +1,5 @@
+{
+  "name": "Random Student Selector",
+  "description": "An offline-first web application to randomly select students or divide them into groups. It's designed to be modern, responsive, and easy to use.",
+  "requestFramePermissions": []
+}
